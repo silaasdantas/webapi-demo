@@ -1,0 +1,10 @@
+replicaCount: 2 # Run 2 copies of the app for reliability
+
+image:
+  repository: 259178953954.dkr.ecr.us-east-1.amazonaws.com/demowebapi
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer # Exposes the app to the internet
+  port: 80
